@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stuDXIA_hp_demo</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container flex">
+            <a href="index.html">
+                <img src="image/logoTraEdit.png" alt="企業ロゴ" width="176" height="30">
+            </a>
+
+            <!-- ハンバーガーボタン -->
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <!-- ナビゲーションメニュー -->
+            <nav class="josefin-sans-reguler" id="navMenu">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a href="404E.html">news</a>
+                <a href="record.html">record</a>
+                <a href="contact_pr.html">contact</a> 
+            </nav>
+        </div>
+    </header>
+
+    <!-- ここから -->
+    <div class="container">
+        <h1 class="tektur-reguler">recode</h1>
+
+        <section2 class="content-section scroll-element-up">
+            <div class="image-box">
+                <img src="image/IMG_1760.JPG" alt="サンプル画像">
+            </div>
+            <div class="text-box">
+                <div class="flex">
+                    <a href="404E.html"><h2>学生SPTのイベント受付をDX化！</h2></a>
+                    <p>2025/03/17</p>
+                </div>
+                <p>これまでは受付業務を紙とペンで行っており、スタッフは膨大な量の手書きデータにより多大な労力を割いていました。
+                    しかし、QRコードとNotionを活用したシステムを導入することで、このプロセスを完全にデジタル化！
+                    参加者はスマートフォンでQRコードを読み取り、Notion上のフォームに必要情報を入力するだけで、受付データが自動的に集約される仕組みを実現しました！
+                    この取り組みにより、スタッフの手作業による入力ミスや重複作業が激減し、受付業務の処理時間を大幅に短縮。結果として、スタッフは本来の業務に専念できる環境が整い、
+                    労働負担の劇的な削減に成功しました！
+                </p>
+            </div>
+        </section2>
+
+    </div>
+
+    <!-- ここまで編集可 -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/studxia/">
+                    <img src="image/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.png" alt="Instagram" width="35" height="35">
+                </a>
+                <a href="https://x.com/studxia?s=11">
+                    <img src="image/x-logo/logo-white.png" alt="X" width="35" height="35">
+                </a>
+            </div>
+            <p>&copy; 2025 stuDXIA</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function handleScroll() {
+            const elements = document.querySelectorAll('.scroll-element-up');
+            elements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            requestAnimationFrame(handleScroll);
+        });
+
+        window.addEventListener('load', handleScroll);
+
+        // ハンバーガーメニュー開閉
+        document.getElementById("hamburger").addEventListener("click", function() {
+            document.getElementById("navMenu").classList.toggle("open");
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll(".column-1 img");
+            let currentIndex = 0;
+        
+            function showNextSlide() {
+                slides[currentIndex].classList.remove("active");
+                currentIndex = (currentIndex + 1) % slides.length;
+                slides[currentIndex].classList.add("active");
+            }
+
+            slides[currentIndex].classList.add("active"); // 最初の画像を表示
+            setInterval(showNextSlide, 7000); // 7秒ごとに切り替え
+        });
+    </script>
+
+</body>
+</html>

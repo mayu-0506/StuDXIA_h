@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stuDXIA_hp_demo</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container flex">
+            <a href="index.html">
+                <img src="image/logoTraEdit.png" alt="企業ロゴ" width="176" height="30">
+            </a>
+
+            <!-- ハンバーガーボタン -->
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <!-- ナビゲーションメニュー -->
+            <nav class="josefin-sans-reguler" id="navMenu">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a href="404E.html">news</a>
+                <a href="record.html">record</a>
+                <a href="contact_pr.html">contact</a> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="topsection">
+            <h2>404 Not Found</h2>
+            <p>ページが見つかりませんでした。</p>
+        </section>
+        
+        <a href="index.html" class="backButton">homeに戻る</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/studxia/">
+                    <img src="image/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.png" alt="Instagram" width="35" height="35">
+                </a>
+                <a href="https://x.com/studxia?s=11">
+                    <img src="image/x-logo/logo-white.png" alt="X" width="35" height="35">
+                </a>
+            </div>
+            <p>&copy; 2025 stuDXIA</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // ハンバーガーメニュー開閉
+            document.getElementById("hamburger").addEventListener("click", function() {
+            document.getElementById("navMenu").classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>
